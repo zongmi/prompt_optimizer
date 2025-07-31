@@ -4,8 +4,10 @@
 
 ## 核心功能
 
+- **多会话管理**: 创建和管理多个独立的 Prompt 优化项目，每个项目都有自己的历史记录。
+- **数据持久化**: 所有会话数据都保存在本地 SQLite 数据库 (`prompt_optimizer.db`) 中，刷新页面或重启应用后不会丢失。
 - **迭代式优化**: 输入一个初始 Prompt，根据模型生成的响应提供反馈，工具会自动生成一个优化后的新版本 Prompt。
-- **版本历史树**: 所有的 Prompt 修改都会被记录在一个版本树中，您可以轻松地在不同版本之间切换和比较。
+- **版本历史树**: 在每个会话中，所有的 Prompt 修改都会被记录在一个版本树中，您可以轻松地在不同版本之间切换和比较。
 - **可配置模型**: 您可以自由选择用于生成响应的“目标模型”和用于优化 Prompt 的“优化模型”。
 - **交互式界面**: 基于 Streamlit 构建，提供友好、直观的用户操作界面。
 
@@ -24,8 +26,8 @@
 
 1.  **克隆项目**
     ```bash
-    git clone https://github.com/zongmi/visual_optimizer.git
-    cd visual_optimizer
+    git clone https://github.com/zongmi/prompt_optimizer.git
+    cd prompt_optimizer
     ```
 
 2.  **创建虚拟环境并安装依赖**
@@ -53,7 +55,7 @@
 确保您的虚拟环境已激活，然后运行以下命令：
 
 ```bash
-streamlit run visual_optimizer.py
+streamlit run prompt_optimizer.py
 ```
 
 应用将在您的本地浏览器中打开。
